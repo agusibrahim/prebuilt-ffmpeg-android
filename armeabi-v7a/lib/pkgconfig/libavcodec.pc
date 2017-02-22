@@ -1,0 +1,14 @@
+prefix=/home/ubuntu/ffmpeg-android/build/armeabi-v7a
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 57.24.102
+Requires: libswresample >= 2.0.101, libavutil >= 55.17.103
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavcodec -L/home/ubuntu/ffmpeg-android/toolchain-android/lib -lx264 -lm -ldl -lmp3lame -L/home/ubuntu/ffmpeg-android/toolchain-android/lib -lfribidi -L/home/ubuntu/ffmpeg-android/toolchain-android/lib -lfreetype -L/home/ubuntu/ffmpeg-android/toolchain-android/lib -lfontconfig -lfreetype -L/home/ubuntu/ffmpeg-android/toolchain-android/lib -lass -lm -lfontconfig -lfribidi -lfreetype -lm -lz -pthread -lpng -lexpat -lm
+Libs.private: 
+Cflags: -I${includedir}
